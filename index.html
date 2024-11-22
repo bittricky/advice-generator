@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" hx-debug="true">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advice Generator</title>
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="advice-container">
+      <div class="advice-card">
+        <p class="advice-id">ADVICE #<span id="advice-number">117</span></p>
+        <p class="advice-container" id="advice-content">
+          "It is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </p>
+
+        <div class="divider">
+          <img
+            src="/divider-desktop.svg"
+            alt="divider"
+            class="divider-desktop"
+          />
+          <img src="/divider-mobile.svg" alt="divider" class="divider-mobile" />
+        </div>
+
+        <button
+          class="dice-button"
+          hx-get="/api/advice"
+          hx-trigger="click"
+          hx-target="#advice-content"
+          hx-swap="innerHTML"
+          hx-on="htmx:responseError: alert('Failed to load advice!');"
+        >
+          <img src="/icon-dice.svg" alt="dice" />
+        </button>
+      </div>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
