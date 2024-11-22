@@ -4,15 +4,6 @@ A responsive advice generator app built to experiment with **HTMX**. This projec
 
 ---
 
-## Features
-
-- Fetch random advice with the click of a button.
-- Responsive design, optimized for desktop and mobile devices.
-- Styled with custom CSS using modern HSL-based colors.
-- Built using **HTMX** for handling dynamic updates without writing custom JavaScript.
-
----
-
 ## Project Setup
 
 ### Prerequisites
